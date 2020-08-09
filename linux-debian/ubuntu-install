@@ -4,6 +4,8 @@ echo "Updating and upgrading"
 sudo apt-get update
 sudo apt-get upgrade
 
+clear 
+
 echo "Adding PPAs"
 # GIT PPA
 sudo add-apt-repository ppa:git-core/ppa
@@ -13,8 +15,12 @@ sudo add-apt-repository \
   $(lsb_release -cs) \
   stable"
 
+clear 
+
 echo "Updating"
 sudo apt update
+
+clear 
 
 echo "Installing snap, git, virtualbox, mongodb, vlc, vscode, discord, chrome"
 # install snap, git 
@@ -36,6 +42,7 @@ sudo snap install discord
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 
+clear 
 
 echo "Installing nvm, node, npm, yarn, vue/cli, docker"
 # nvm install
