@@ -1,0 +1,6 @@
+#!/bin/sh
+# Remove geary, gnome-weather, simple-scan and gnome-contacts
+sudo apt remove geary
+sudo apt remove gnome-weather
+sudo apt remove simple-scan
+sudo apt remove gnome-contacts

@@ -16,13 +16,15 @@ sudo apt update
 
 clear 
 
-echo "Installing snap, git, virtualbox, mongodb, vlc, vscode, discord, chrome"
+echo "Installing snap, git, virtualbox, mongodb, docker-compose, falmeshot, gnome-tweaks, vlc, vscode, discord, docker, chrome"
 # install snap, git 
 sudo apt install snapd
-sudo apt install virtualbox
 sudo apt install git
+sudo apt install virtualbox
 sudo apt install -y mongodb
 sudo apt install docker-compose
+sudo apt install flameshot
+sudo apt install gnome-tweaks
 
 sudo snap install vlc
 sudo snap install code --classic
@@ -34,7 +36,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 
 clear 
 
-echo "Installing nvm, node, npm, yarn, vue/cli, docker"
+echo "Installing nvm, node, npm, yarn, vue/cli, commitizen"
 # nvm install
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm 
