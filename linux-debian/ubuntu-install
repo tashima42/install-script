@@ -16,7 +16,7 @@ sudo apt update
 
 clear 
 
-echo "Installing snap, git, virtualbox, mongodb, docker-compose, falmeshot, gnome-tweaks, vlc, vscode, discord, docker, chrome"
+echo "Installing snap, git, virtualbox, mongodb, docker-compose, falmeshot, gnome-tweaks, vlc, vscode, discord, docker, chrome, joplin"
 # install snap, git 
 sudo apt install snapd
 sudo apt install git
@@ -34,6 +34,8 @@ sudo snap install docker
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
+
 clear 
 
 echo "Installing nvm, node, npm, yarn, vue/cli, commitizen"
@@ -49,7 +51,7 @@ sudo npm install -g yarn
 # Vue install
 sudo yarn global add @vue/cli
 sudo yarn global add commitizen
-
+sudo yarn global add cz-conventional-changelog
 
 #fix snap not showing apps on drawer
 mkdir -p ~/.config/environment.d
