@@ -9,6 +9,7 @@ clear
 echo "Adding PPAs"
 # GIT PPA
 sudo add-apt-repository ppa:git-core/ppa
+sudo add-apt-repository ppa:mattrose/terminator
 clear 
 
 echo "Updating"
@@ -20,20 +21,21 @@ echo "Installing snap, git, virtualbox, mongodb, docker-compose, falmeshot, gnom
 # install snap, git 
 sudo apt install -y snapd
 sudo apt install -y git
-sudo apt install -y virtualbox
-sudo apt install -y mongodb
+#sudo apt install -y virtualbox
+#sudo apt install -y mongodb
 sudo apt install -y docker-compose
-sudo apt install -y gnome-tweaks
+sudo apt install -y terminator
+#sudo apt install -y gnome-tweaks
 
-sudo snap install vlc
 sudo snap install code --classic
-sudo snap install discord 
+#sudo snap install discord 
 sudo snap install docker
-sudo snap install barrier
-sudo snap install postman
-
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
+#sudo snap install barrier
+sudo snap install firefox
+sudo snap install flameshot
+sudo snap install termius-app
+sudo snap install nvim --classic
+sudo snap install brave
 
 clear 
 
@@ -41,16 +43,11 @@ echo "Installing nvm, node, npm, yarn, vue/cli, commitizen"
 # nvm install
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm 
-nvm install 14.7.0
+nvm install 14
 
 # npm & yarn install
 sudo apt install npm
 sudo npm install -g yarn
-
-# Vue install
-sudo yarn global add @vue/cli
-sudo yarn global add commitizen
-sudo yarn global add cz-conventional-changelog
 
 # Install Zsh
 sudo apt install -y zsh
@@ -58,5 +55,5 @@ sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/ins
 chsh -s $(which zsh)
 
 #fix snap not showing apps on drawer
-mkdir -p ~/.config/environment.d
-echo "PATH=$PATH:/snap/bin\nXDG_DATA_DIRS=\"${XDG_DATA_DIRS:-/usr/local/share:/usr/share}:/var/lib/snapd/desktop\"" > ~/.config/environment.d/60-snap-icons-and-bin.conf
+#mkdir -p ~/.config/environment.d
+#echo "PATH=$PATH:/snap/bin\nXDG_DATA_DIRS=\"${XDG_DATA_DIRS:-/usr/local/share:/usr/share}:/var/lib/snapd/desktop\"" > ~/.config/environment.d/60-snap-icons-and-bin.conf
