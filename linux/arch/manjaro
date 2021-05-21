@@ -1,0 +1,25 @@
+#!/bin/sh
+# update & upgrade #
+echo "Updating and upgrading"
+sudo pacman -Syyuu
+
+clear 
+
+echo "Installing docker-compose, vscode, docker, firefox, flameshot, termius, nvim brave"
+sudo pacman -S docker-compose
+sudo snap install code --classic
+sudo snap install docker
+sudo snap install firefox
+sudo snap install flameshot
+sudo snap install termius-app
+sudo snap install nvim --classic
+sudo snap install brave
+
+clear 
+
+echo "Installing nvm, node"
+# nvm install
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+source ~/.bashrc
+nvm 
+nvm install 14
