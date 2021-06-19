@@ -1,0 +1,40 @@
+section: screens
+	tashima-arch:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		preserveFocus = false
+		switchCorners = none 
+		switchCornerSize = 0
+	tashima-note:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		preserveFocus = false
+		switchCorners = none 
+		switchCornerSize = 0
+end
+
+section: aliases
+end
+
+section: links
+	tashima-arch:
+		right = tashima-note
+	tashima-note:
+		left = tashima-arch
+end
+
+section: options
+	relativeMouseMoves = false
+	screenSaverSync = true
+	win32KeepForeground = false
+	clipboardSharing = true
+	switchDoubleTap = 250
+	switchCorners = none 
+	switchCornerSize = 0
+	keystroke(Shift+Meta+o) = switchInDirection(right)
+end
+
