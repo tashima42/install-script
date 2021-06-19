@@ -7,6 +7,7 @@ clear
 
 echo "Installing docker-compose, vscode, docker, firefox, flameshot, termius, nvim brave"
 sudo pacman -S docker-compose
+sudo pacman -S rofi
 sudo snap install code --classic
 sudo snap install docker
 sudo snap install firefox
@@ -14,6 +15,7 @@ sudo snap install flameshot
 sudo snap install termius-app
 sudo snap install nvim --classic
 sudo snap install brave
+sudo snap install barrier
 
 clear 
 
