@@ -5,6 +5,9 @@ sudo pacman -Syyuu
 
 clear 
 
+# stop annoing beep sounds
+echo "blacklist pcspkr" | sudo tee -a /etc/modprobe.d/nobeep.conf
+
 echo "Installing docker-compose, vscode, docker, firefox, flameshot, termius, nvim brave"
 sudo pacman -S docker-compose
 sudo pacman -S rofi
