@@ -1,10 +1,9 @@
 # Instal Scripts
 
 ## Linux
-### Ubuntu
-1. cd clone directory
-2. `sudo chmod +x ubuntu-install`
-3. `./ubuntu-install`
+1. `cd linux/[distro]` 
+2. `sudo chmod +x [install-file]`
+3. `./[install-file]`
 
 ## Windows
 PowerShell Script to install apps and VS Code extensions 
