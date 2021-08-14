@@ -4,9 +4,9 @@
 
 sudo echo "ask for password before all the scripts"
 
-# set .zshrc
-wget -O $HOME/.zshrc https://gist.githubusercontent.com/veggiemonk/f7dc67b05400905973e2db050dffd05b/raw/433d43edc07339c181b20b83406d1f5053583688/.zshrc
+# set config files
 cp zshrc $HOME/.zshrc
+cp gitconfig $HOME/.gitconfig
 
 # install oh-my-zsh plugins
 git clone https://github.com/djui/alias-tips.git $HOME/.oh-my-zsh/custom/plugins/alias-tips
