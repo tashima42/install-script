@@ -1,8 +1,4 @@
-#!/usr/bin/env bash
-
-# ask for password before all the scripts
-
-sudo echo "ask for password before all the scripts"
+#!/bin/bash
 
 # set config files
 cp zshrc $HOME/.zshrc
