@@ -38,6 +38,7 @@ sudo snap install code --classic
 #sudo snap install discord 
 sudo snap install docker
 sudo snap install barrier
+sudo snap install espanso
 #sudo snap install firefox
 #sudo snap install flameshot
 #sudo snap install termius-app
