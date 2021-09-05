@@ -1,0 +1,36 @@
+#!/bin/sh
+# update & upgrade #
+echo "Updating and upgrading"
+sudo pacman -Syyuu
+
+clear 
+
+echo "Installing docker-compose, vscode, docker, firefox, flameshot, termius, nvim brave"
+sudo pacman -S docker-compose
+sudo pacman -S neovim
+sudo pacman -S tty-solitaire
+yay -S snapd
+yay -S visual-studio-code-bin
+yay -S espanso 
+yay -S telegram-desktop
+yay -S xorg-xbacklight
+
+# espanso install
+espanso install portuguese-accents https://github.com/Tashima42/Portuguese-Accents
+
+
+clear 
+
+echo "Installing nvm, node"
+# nvm install
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+echo "Post-installation steps for Docker"
+reset
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+
+# fix snap apps not showing on drawer
+mkdir -p ~/.config/environment.d
+echo "PATH=$PATH:/snap/bin\nXDG_DATA_DIRS=\"${XDG_DATA_DIRS:-/usr/local/share:/usr/share}:/var/lib/snapd/desktop\"" > ~/.config/environment.d/60-snap-icons-and-bin.conf
